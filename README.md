@@ -144,4 +144,4 @@ This project was created for academic purposes under CAT201 and demonstrates:
 
 ## License
 
-This project is for educational purposes only.
+Licensed under Suhaffinity.co
