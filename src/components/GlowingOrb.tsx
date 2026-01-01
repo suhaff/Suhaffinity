@@ -4,30 +4,31 @@ import * as THREE from "three";
 
 export default function GlowingOrb() {
   const group = useRef<THREE.Group>(null!);
-  const ring1 = useRef<THREE.Mesh>(null!);
-  const ring2 = useRef<THREE.Mesh>(null!);
-  const ring3 = useRef<THREE.Mesh>(null!);
+
+  const rings = [
+    useRef<THREE.Mesh>(null!),
+    useRef<THREE.Mesh>(null!),
+    useRef<THREE.Mesh>(null!)
+  ];
 
   const [hovered, setHovered] = useState(false);
 
   useFrame(() => {
     if (!group.current) return;
 
-    // Speed control
     const speed = hovered ? 0.02 : 0.006;
 
-    // Whole system gentle rotation
-    group.current.rotation.y += hovered ? 0.003 : 0.0015;
+    group.current.rotation.y += hovered ? 0.0025 : 0.001;
 
-    // Individual ring motion
-    ring1.current.rotation.z += speed;
-    ring2.current.rotation.x += speed * 0.8;
-    ring3.current.rotation.y += speed * 1.1;
+    rings[0].current.rotation.x += speed;
+    rings[1].current.rotation.y -= speed * 0.9;
+    rings[2].current.rotation.z += speed * 1.1;
 
-    // Hover scale
-    const targetScale = hovered ? 1.3 : 1;
+    const baseScale = 1.8;
+    
+    const scale = hovered ? baseScale * 1.25 : baseScale;
     group.current.scale.lerp(
-      new THREE.Vector3(targetScale, targetScale, targetScale),
+      new THREE.Vector3(scale, scale, scale),
       0.08
     );
   });
@@ -38,46 +39,50 @@ export default function GlowingOrb() {
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
-      {/* Core Sphere */}
+      {/* TRUE BLACK HOLE CORE (no lighting) */}
+      <mesh>
+        <sphereGeometry args={[0.5, 64, 64]} />
+        <meshBasicMaterial color="#000000" />
+      </mesh>
+
+      {/* INNER GLOW */}
       <mesh>
         <sphereGeometry args={[0.65, 64, 64]} />
         <meshStandardMaterial
-          color="#9fd3dc"
+          emissive="#000000ff"
+          emissiveIntensity={hovered ? 1.2 : 0.7}
           transparent
-          opacity={0.85}
-          roughness={0.4}
-          metalness={0.1}
+          opacity={0.12}
         />
       </mesh>
 
-      {/* Ring 1 - Horizontal */}
-      <mesh ref={ring1} rotation={[Math.PI / 2, 0, 0]}>
-        <torusGeometry args={[1.05, 0.035, 16, 120]} />
+      {/* OUTER GLOW */}
+      <mesh>
+        <sphereGeometry args={[0.85, 64, 64]} />
         <meshStandardMaterial
-          color="#dffcff"
-          emissive="#dffcff"
-          emissiveIntensity={0.9}
+          emissive="#040000ff"
+          emissiveIntensity={hovered ? 0.9 : 0.5}
+          transparent
+          opacity={0.08}
         />
       </mesh>
 
-      {/* Ring 2 - Vertical */}
-      <mesh ref={ring2} rotation={[0, 0, Math.PI / 2]}>
-        <torusGeometry args={[1.05, 0.035, 16, 120]} />
-        <meshStandardMaterial
-          color="#ff9ad5"
-          emissive="#ff9ad5"
-          emissiveIntensity={0.9}
-        />
+      {/* RING 1 – WHITE (EQUATOR) */}
+      <mesh ref={rings[0]} rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[1.1, 0.035, 16, 160]} />
+        <meshStandardMaterial emissive="#ffffff" emissiveIntensity={0.9} />
       </mesh>
 
-      {/* Ring 3 - Diagonal */}
-      <mesh ref={ring3} rotation={[Math.PI / 4, 0, Math.PI / 4]}>
-        <torusGeometry args={[1.05, 0.035, 16, 120]} />
-        <meshStandardMaterial
-          color="#d9ffe6"
-          emissive="#d9ffe6"
-          emissiveIntensity={0.9}
-        />
+      {/* RING 2 – ORANGE */}
+      <mesh ref={rings[1]} rotation={[0, Math.PI / 3, 0]}>
+        <torusGeometry args={[1.25, 0.03, 16, 160]} />
+        <meshStandardMaterial emissive="#ff8c00" emissiveIntensity={1.1} />
+      </mesh>
+
+      {/* RING 3 – WHITE (TILTED) */}
+      <mesh ref={rings[2]} rotation={[Math.PI / 4, 0, Math.PI / 4]}>
+        <torusGeometry args={[1.4, 0.025, 16, 160]} />
+        <meshStandardMaterial emissive="#ffffff" emissiveIntensity={0.8} />
       </mesh>
     </group>
   );

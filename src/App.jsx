@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
+      {/* Star background */}
+      <div className="stars" />
+
       <Navbar />
 
       <Routes>

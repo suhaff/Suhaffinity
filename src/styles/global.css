@@ -1,21 +1,65 @@
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  background: #000;
+html,
+body {
+  background: #070b14; /* space black */
+  color: white;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* ---------- STAR BACKGROUND ---------- */
+.stars {
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1.5px 1.5px at 30% 80%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px at 70% 30%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 15% 60%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 85% 15%, rgba(255,255,255,0.5), transparent);
+  background-size: 300px 300px;
+  animation: drift 180s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300px);
+  }
 }
 
 
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-240px);
+  }
+}
+
+/* ---------- HERO ---------- */
 .hero {
   min-height: 100vh;
-  background: radial-gradient(circle at top, #0b0b0b, #000000);
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 40%),
+    radial-gradient(circle at bottom, #0b1020 0%, #070b14 65%);
   display: flex;
   align-items: center;
   padding: 0 8%;
-  color: white;
 }
 
 .hero-left {
@@ -37,20 +81,30 @@ html, body {
 .hero-left button {
   margin-top: 2rem;
   background: none;
-  border: 1px solid white;
+  border: 1px solid rgba(255,255,255,0.6);
   padding: 12px 26px;
   color: white;
   cursor: pointer;
   font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.hero-left button:hover {
+  background: rgba(255,255,255,0.08);
 }
 
 .hero-right {
   flex: 1;
-  height: 500px;
+  height: 600px;
+  min-height: 600px;
+  position: relative;
+  overflow: visible; /* VERY IMPORTANT */
 }
+
+
+/* ---------- COMPANY DETAILS ---------- */
 .company-details {
-  background: linear-gradient(to bottom, #000, #0a0a0a);
-  color: white;
+  background: linear-gradient(to bottom, #070b14, #05080f);
   padding: 6rem 8%;
 }
 
@@ -72,30 +126,26 @@ html, body {
 }
 
 .slab {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   padding: 2rem;
-  border-radius: 14px;
-  transition: all 0.3s ease;
-  cursor: default;
+  border-radius: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .slab:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.slab h3 {
-  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .slab p {
   opacity: 0.8;
   font-size: 0.95rem;
 }
+
+/* ---------- MISSION & VISION ---------- */
 .mission-vision {
-  background: linear-gradient(to bottom, #0a0a0a, #000);
-  color: white;
+  background: linear-gradient(to bottom, #05080f, #04070c);
   padding: 6rem 8%;
 }
 
@@ -111,33 +161,25 @@ html, body {
 }
 
 .mv-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   padding: 2.5rem;
   border-radius: 16px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .mv-card:hover {
   transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.07);
 }
 
-.mv-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.mv-card p {
-  opacity: 0.85;
-  line-height: 1.6;
-}
+/* ---------- FOOTER ---------- */
 footer {
   margin-top: 0;
 }
+
 .footer {
-  background: #000;
-  color: white;
+  background: linear-gradient(to top, #02040a, #04070c);
   padding: 4rem 8% 2rem;
 }
 
