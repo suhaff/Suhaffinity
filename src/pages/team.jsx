@@ -1,12 +1,40 @@
-const Team = () => {
+import TeamCard from "../components/TeamCard";
+
+import numaan from "../assets/team/numaan.jpg";
+import luqman from "../assets/team/luqman.jpg";
+import raza from "../assets/team/raza.jpg";
+
+export default function Team() {
   return (
-    <section style={{ padding: "80px" }}>
-      <h2>Our Team</h2>
-      <p><strong>Numaan Suhaff</strong> — Founder & Software Developer</p>
-      <p><strong>Luqman Hyder Bhat</strong> — Backend Developer</p>
-      <p><strong>Raza Momin</strong> — UI/UX Designer</p>
+    <section className="team-hero">
+      <h1>Meet the Team</h1>
+      <p>
+        A small, focused team driven by engineering discipline,
+        curiosity, and long-term thinking.
+      </p>
+
+      <div className="team-cards">
+        <TeamCard
+          name="Numaan Suhaff"
+          role="Founder & CEO"
+          image={numaan}
+          slug="numaan"
+        />
+
+        <TeamCard
+          name="Luquman Hyder Bhat"
+          role="Co-founder & CFO"
+          image={luqman}
+          slug="luqman"
+        />
+
+        <TeamCard
+          name="Raza Momin"
+          role="Co-founder & COO"
+          image={raza}
+          slug="raza"
+        />
+      </div>
     </section>
   );
-};
-
-export default Team;
+}

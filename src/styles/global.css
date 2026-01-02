@@ -262,3 +262,105 @@ footer {
 .footer-form button:hover {
   background: rgba(255, 255, 255, 0.08);
 }
+.team-hero {
+  min-height: 100vh;
+  padding: 6rem 8%;
+  text-align: center;
+}
+
+.team-cards {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+/* 3D CARD */
+.team-card-3d {
+  width: 260px;
+  height: 360px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.team-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.team-card-3d:hover .team-card-inner {
+  transform: rotateY(180deg);
+}
+
+.team-card-front,
+.team-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+.team-card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.team-card-back {
+  background: rgba(0,0,0,0.9);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card-back h3 {
+  margin-bottom: 0.5rem;
+}
+.team-card-3d {
+  cursor: pointer;
+  user-select: none;
+}
+
+.team-card-3d:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 6px;
+}
+.profile-page {
+  padding: 6rem 8%;
+  color: white;
+}
+
+.profile-hero {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.profile-photo {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.profile-intro h1 {
+  font-size: 3rem;
+}
+
+.profile-intro h2 {
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.profile-section {
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+.profile-links li {
+  margin-bottom: 0.8rem;
+}

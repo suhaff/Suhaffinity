@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Product from "./pages/Product";
 import Team from "./pages/Team";
+import Profile from "./pages/Profile";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,6 +24,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/product" element={<Product />} />
         <Route path="/team" element={<Team />} />
+
+        {/* Individual team member profile */}
+        <Route path="/team/:slug" element={<Profile />} />
       </Routes>
 
       <Footer />
