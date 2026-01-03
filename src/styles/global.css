@@ -417,3 +417,227 @@ footer {
   opacity: 0.85;
   line-height: 1.6;
 }
+
+
+.mission-vision h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.mv-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 2.6rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mv-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.mv-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.65;
+}
+.about-page {
+  padding: 6rem 8%;
+}
+
+.about-hero {
+  margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-subtitle {
+  opacity: 0.75;
+  font-size: 1.1rem;
+}
+
+.about-section {
+  max-width: 900px;
+  margin-bottom: 4.5rem;
+}
+
+.about-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.about-closing {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+.about-page {
+  padding: 6rem 8%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+}
+
+.about-tagline {
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+}
+
+.about-content p {
+  margin-bottom: 1.6rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* Mission Vision Flip Card */
+.mv-flip-card {
+  width: 360px;
+  height: 320px;
+  margin: 0 auto;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.mv-flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.mv-flip-card:hover .mv-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.mv-front,
+.mv-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backface-visibility: hidden;
+  padding: 2.5rem;
+}
+
+.mv-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.mv-back {
+  transform: rotateY(180deg);
+}
+
+/* Buzz Page */
+.buzz-page {
+  min-height: 100vh;
+  padding: 6rem 8%;
+  text-align: center;
+}
+
+.buzz-image {
+  width: 260px;
+  margin-bottom: 2rem;
+}
+.mission-vision-section {
+  padding: 6rem 8%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.mv-flip-card {
+  height: 280px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.mv-flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.mv-flip-card:hover .mv-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.mv-front,
+.mv-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backface-visibility: hidden;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mv-front h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.mv-front span {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.mv-back {
+  transform: rotateY(180deg);
+}
+
+.mv-back p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
