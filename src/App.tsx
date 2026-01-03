@@ -1,15 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Product from "./pages/Product";
-import Team from "./pages/Team";
-import Profile from "./pages/Profile";
-import Buzz from "./pages/Buzz";
+// pages (MATCH CASE + EXTENSION EXACTLY)
+import Home from "./pages/home.jsx";
+import About from "./pages/about.jsx";
+import Services from "./pages/services.jsx";
+import Product from "./pages/product.jsx";
+import Team from "./pages/team.jsx";
+import Profile from "./pages/Profile.jsx";
+import Buzz from "./pages/Buzz.jsx";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// components
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
