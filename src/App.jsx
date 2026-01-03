@@ -26,6 +26,8 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/team" element={<Team />} />
         <Route path="/buzz" element={<Buzz />} />
+        <Route path="/product" element={<Product />} />
+
 
         {/* Individual team member profile */}
         <Route path="/team/:slug" element={<Profile />} />

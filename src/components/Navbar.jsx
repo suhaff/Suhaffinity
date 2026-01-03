@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav style={styles.nav}>
-      <h2 style={styles.logo}>Suhaffinity</h2>
+      {/* Logo → Home */}
+      <Link to="/" style={styles.logoLink}>
+        <h2 style={styles.logo}>Suhaffinity</h2>
+      </Link>
 
       <div style={styles.links}>
         <Link to="/" style={styles.link}>Home</Link>
@@ -27,6 +30,11 @@ const styles = {
   },
   logo: {
     margin: 0,
+    cursor: "pointer",
+  },
+  logoLink: {
+    textDecoration: "none",
+    color: "inherit",
   },
   links: {
     display: "flex",

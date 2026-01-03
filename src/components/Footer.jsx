@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -15,7 +17,13 @@ export default function Footer() {
         {/* Contact Info */}
         <div>
           <h4>Contact</h4>
-          <p>Email: <a href="mailto:contact@suhaffinity.com">contact@suhaffinity.com</a></p>
+          <p>
+            Email:{" "}
+            <a href="mailto:contact@suhaffinity.com">
+              contact@suhaffinity.com
+              suhaffinity@gmail.com
+            </a>
+          </p>
           <p>Phone: +60 11-XXXX XXXX</p>
         </div>
 
@@ -28,15 +36,10 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Contact Form */}
+        {/* Contact Form (NOW FUNCTIONAL) */}
         <div>
           <h4>Contact Us</h4>
-          <form className="footer-form">
-            <input type="text" placeholder="Your name" />
-            <input type="email" placeholder="Your email" />
-            <textarea placeholder="Your message" rows="3" />
-            <button type="submit">Send Message</button>
-          </form>
+          <ContactForm />
         </div>
       </div>
 
