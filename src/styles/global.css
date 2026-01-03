@@ -641,3 +641,129 @@ footer {
   line-height: 1.7;
   opacity: 0.85;
 }
+/* ===============================
+   SERVICES SECTION – Suhaffinity
+   =============================== */
+
+.services-section {
+  padding: 6rem 8%;
+  color: #fff;
+}
+
+.services-header {
+  max-width: 700px;
+  margin-bottom: 4rem;
+}
+
+.services-header h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.services-header p {
+  color: #b3b3b3;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.service-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.service-card p {
+  color: #cfcfcf;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.service-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-card li {
+  color: #a8a8a8;
+  margin-bottom: 0.4rem;
+}
+
+.price {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.service-link:hover {
+  opacity: 1;
+}
+
+/* Custom Demand */
+
+.custom-demand {
+  margin-top: 6rem;
+  max-width: 700px;
+}
+
+.custom-demand h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.custom-demand p {
+  color: #b3b3b3;
+  margin-bottom: 2rem;
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.custom-form textarea,
+.custom-form select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+
+.custom-form button {
+  align-self: flex-start;
+  padding: 0.7rem 2rem;
+  border-radius: 999px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.custom-form button:hover {
+  background: #fff;
+  color: #000;
+}
