@@ -21,19 +21,20 @@ const teamData = {
   },
 
   luqman: {
-    name: "Luqman Hyder Bhat",
+    name: "Luqmaan Hyder",
     role: "Co-Founder & CFO",
     image: "/assets/team/luqman.jpg",
     intro:
       "Backend-focused engineer with a strong interest in system reliability, data integrity, and sustainable technical growth.",
     about: [
-      "Luqman co-founded Suhaffinity with a focus on building financially and technically sustainable systems.",
+      "Luqmaan co-founded Suhaffinity with a focus on building financially and technically sustainable systems.",
       "He plays a key role in backend development, infrastructure planning, and ensuring that the company grows responsibly without compromising engineering quality.",
-      "With a strong analytical mindset, Luqman bridges engineering decisions with long-term operational and financial stability."
+      "With a strong analytical mindset, Luqmaan bridges engineering decisions with long-term operational and financial stability."
     ],
     links: [
-      { label: "GitHub", url: "https://github.com/luqman" },
-      { label: "Email", url: "mailto:luqman@suhaffinity.com" }
+      { label: "GitHub", url: "https://github.com/luqspy" },
+      { label: "Email", url: "mailto:luqmaan@suhaffinity.com" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/luqmaanhyder/" }
     ]
   },
 

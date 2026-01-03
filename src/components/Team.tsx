@@ -5,15 +5,15 @@ const Team = () => {
       <div className="cards">
         <div className="card">
           <h4>Numaan Suhaff</h4>
-          <p>Founder & Software Developer</p>
+          <p>Founder & CEO</p>
         </div>
         <div className="card">
           <h4>Luqman Hyder Bhat</h4>
-          <p>Backend Developer</p>
+          <p>Founder & CFO</p>
         </div>
         <div className="card">
           <h4>Raza Momin</h4>
-          <p>UI/UX Designer</p>
+          <p>Founder & COO</p>
         </div>
       </div>
     </section>

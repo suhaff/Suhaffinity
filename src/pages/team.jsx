@@ -22,7 +22,7 @@ export default function Team() {
         />
 
         <TeamCard
-          name="Luquman Hyder Bhat"
+          name="Luqmaan Hyder"
           role="Co-founder & CFO"
           image={luqman}
           slug="luqman"
