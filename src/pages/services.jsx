@@ -20,15 +20,24 @@ export default function Services() {
             Modern, responsive, high-performance websites built using the latest
             frontend and backend technologies.
           </p>
+
           <ul>
             <li>React / Next.js / Vite</li>
             <li>SEO & performance optimized</li>
             <li>Responsive across all devices</li>
           </ul>
+
           <span className="price">Starting from $800 – $3,500</span>
-          <Link to="/product" className="service-link">
-            View Past Products →
-          </Link>
+
+          <div className="service-actions">
+            <Link to="/product" className="btn-primary">
+              View Past Products →
+            </Link>
+
+            <Link to="/contact" className="btn-secondary">
+              Request Service
+            </Link>
+          </div>
         </div>
 
         {/* Custom Software */}
@@ -38,15 +47,24 @@ export default function Services() {
             Tailored software designed specifically for your business logic,
             workflows, and long-term scalability.
           </p>
+
           <ul>
             <li>Enterprise-grade architecture</li>
             <li>Secure & scalable systems</li>
             <li>Maintenance & support</li>
           </ul>
+
           <span className="price">Starting from $1,500 – $10,000+</span>
-          <Link to="/product" className="service-link">
-            View Past Products →
-          </Link>
+
+          <div className="service-actions">
+            <Link to="/product" className="btn-primary">
+              View Past Products →
+            </Link>
+
+            <Link to="/contact" className="btn-secondary">
+              Request Service
+            </Link>
+          </div>
         </div>
 
         {/* API Development */}
@@ -56,15 +74,24 @@ export default function Services() {
             Robust, secure, and well-documented APIs for seamless integration
             between systems and platforms.
           </p>
+
           <ul>
             <li>REST / GraphQL APIs</li>
             <li>Authentication & security</li>
             <li>Third-party integrations</li>
           </ul>
+
           <span className="price">Starting from $600 – $4,000</span>
-          <Link to="/product" className="service-link">
-            View Past Products →
-          </Link>
+
+          <div className="service-actions">
+            <Link to="/product" className="btn-primary">
+              View Past Products →
+            </Link>
+
+            <Link to="/contact" className="btn-secondary">
+              Request Service
+            </Link>
+          </div>
         </div>
 
         {/* UI/UX Design */}
@@ -74,15 +101,24 @@ export default function Services() {
             Elegant, user-focused designs that enhance usability, engagement,
             and brand identity.
           </p>
+
           <ul>
             <li>Wireframes & prototypes</li>
             <li>Design systems</li>
             <li>Accessibility focused</li>
           </ul>
+
           <span className="price">Starting from $400 – $2,000</span>
-          <Link to="/product" className="service-link">
-            View Past Products →
-          </Link>
+
+          <div className="service-actions">
+            <Link to="/product" className="btn-primary">
+              View Past Products →
+            </Link>
+
+            <Link to="/contact" className="btn-secondary">
+              Request Service
+            </Link>
+          </div>
         </div>
 
       </div>

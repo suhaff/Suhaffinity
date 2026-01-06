@@ -1208,3 +1208,631 @@ footer {
     0 0 42px rgba(255, 120, 0, 0.18),
     inset 0 0 20px rgba(255, 120, 0, 0.08);
 }
+/* ===============================
+   ABOUT PAGE – ENHANCED VISUALS
+   =============================== */
+
+.about-glow-divider {
+  width: 140px;
+  height: 3px;
+  margin: 2rem auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 140, 0, 0.9),
+    transparent
+  );
+  box-shadow:
+    0 0 14px rgba(255, 140, 0, 0.6),
+    0 0 36px rgba(255, 120, 0, 0.35);
+  border-radius: 999px;
+}
+
+.highlight {
+  color: #fff;
+  text-shadow:
+    0 0 6px rgba(255, 140, 0, 0.6),
+    0 0 14px rgba(255, 120, 0, 0.35);
+}
+
+/* ===============================
+   MISSION & VISION PANELS
+   =============================== */
+
+.mv-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.mv-panel {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 3rem;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.4s ease;
+}
+
+.mv-panel:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 22px rgba(255, 140, 0, 0.28),
+    0 0 48px rgba(255, 120, 0, 0.2),
+    inset 0 0 20px rgba(255, 120, 0, 0.08);
+}
+
+.mv-panel h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.mv-subtitle {
+  display: block;
+  opacity: 0.7;
+  margin-bottom: 1.6rem;
+}
+
+.mv-panel ul {
+  padding-left: 1.2rem;
+}
+
+.mv-panel li {
+  margin-bottom: 0.8rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===============================
+   DEEP DIVE SECTION
+   =============================== */
+
+.mission-vision-deep {
+  max-width: 1000px;
+  margin: 6rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.deep-block {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.deep-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 140, 0, 0.8),
+    transparent
+  );
+  box-shadow: 0 0 14px rgba(255, 140, 0, 0.6);
+  border-radius: 999px;
+}
+
+.deep-block h3 {
+  margin-bottom: 0.8rem;
+}
+
+.deep-block p {
+  opacity: 0.85;
+  line-height: 1.7;
+}
+/* ===============================
+   SERVICES – CTA BUTTONS
+   =============================== */
+
+.service-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  flex-wrap: wrap;
+}
+
+/* PRIMARY BUTTON (View Past Products) */
+.btn-primary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.06);
+  box-shadow:
+    0 6px 20px rgba(255, 255, 255, 0.35);
+}
+
+/* SECONDARY BUTTON (Request Service) */
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 140, 0, 0.8);
+  color: rgba(255, 180, 100, 0.9);
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 140, 0, 0.95);
+  color: #000000;
+  transform: scale(1.06);
+  box-shadow:
+    0 0 18px rgba(255, 140, 0, 0.5),
+    0 0 36px rgba(255, 120, 0, 0.35);
+}
+.service-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 18px rgba(255, 140, 0, 0.22),
+    0 0 40px rgba(255, 120, 0, 0.16),
+    inset 0 0 18px rgba(255, 120, 0, 0.07);
+}
+/* ===============================
+   REMOVE UNDERLINES (GLOBAL)
+   =============================== */
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+/* ===============================
+   CUSTOM DEMAND – FORM FIX
+   =============================== */
+
+.custom-form textarea,
+.custom-form select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  appearance: none;
+}
+
+/* Dropdown arrow (custom) */
+.custom-form select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255, 140, 0, 0.9) 50%),
+    linear-gradient(135deg, rgba(255, 140, 0, 0.9) 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) calc(50% - 3px),
+    calc(100% - 16px) calc(50% - 3px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* Dropdown options */
+.custom-form select option {
+  background: #070b14;
+  color: #ffffff;
+}
+
+/* Focus glow */
+.custom-form textarea:focus,
+.custom-form select:focus {
+  outline: none;
+  border-color: rgba(255, 140, 0, 0.8);
+  box-shadow:
+    0 0 12px rgba(255, 140, 0, 0.4),
+    inset 0 0 12px rgba(255, 120, 0, 0.15);
+}
+/* ===============================
+   SERVICE BUTTON POLISH
+   =============================== */
+
+.btn-primary,
+.btn-secondary {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover arrow motion (subtle) */
+.btn-primary:hover::after {
+  content: "";
+}
+/* ===============================
+   CUSTOM DEMAND – VISUAL ACCENT
+   =============================== */
+
+.custom-demand {
+  position: relative;
+  margin-top: 6rem;
+}
+
+.custom-demand::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 0, 0.9),
+    transparent
+  );
+  box-shadow:
+    0 0 14px rgba(255, 140, 0, 0.6),
+    0 0 30px rgba(255, 120, 0, 0.35);
+  border-radius: 999px;
+}
+/* ===============================
+   PRODUCT PAGE – VISUAL POLISH
+   =============================== */
+
+.product-glow-divider {
+  width: 140px;
+  height: 3px;
+  margin-top: 1.6rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 140, 0, 0.9),
+    transparent
+  );
+  box-shadow:
+    0 0 14px rgba(255, 140, 0, 0.6),
+    0 0 36px rgba(255, 120, 0, 0.35);
+  border-radius: 999px;
+}
+
+/* Section spacing */
+.product-group {
+  margin-bottom: 5rem;
+}
+
+/* Flip card enhancement */
+.flip-card {
+  perspective: 1200px;
+  transition: transform 0.3s ease;
+}
+
+.flip-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Front face */
+.flip-front {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Back face */
+.flip-back {
+  background: rgba(15, 10, 5, 0.95);
+  border: 1px solid rgba(255, 140, 0, 0.25);
+}
+
+/* Glow on hover */
+.flip-card:hover .flip-front,
+.flip-card:hover .flip-back {
+  box-shadow:
+    0 0 18px rgba(255, 140, 0, 0.25),
+    0 0 40px rgba(255, 120, 0, 0.18),
+    inset 0 0 18px rgba(255, 120, 0, 0.08);
+}
+
+/* View Project arrow polish */
+.flip-front span {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+/* Arrow interaction */
+.flip-card:hover .flip-front span {
+  opacity: 1;
+  transform: translateX(6px);
+  text-shadow:
+    0 0 8px rgba(255, 140, 0, 0.6),
+    0 0 18px rgba(255, 120, 0, 0.35);
+}
+
+/* Title emphasis */
+.flip-front h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  transition: text-shadow 0.25s ease;
+}
+
+.flip-card:hover .flip-front h4 {
+  text-shadow:
+    0 0 10px rgba(255, 140, 0, 0.45),
+    0 0 24px rgba(255, 120, 0, 0.3);
+}
+
+/* Back text readability */
+.flip-back p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Smooth flip transition */
+.flip-inner {
+  transition: transform 0.6s ease;
+}
+
+/* Optional: focus-visible for accessibility */
+.flip-card:focus-visible {
+  outline: none;
+}
+
+.flip-card:focus-visible .flip-front,
+.flip-card:focus-visible .flip-back {
+  box-shadow:
+    0 0 18px rgba(255, 140, 0, 0.35),
+    0 0 40px rgba(255, 120, 0, 0.25);
+}
+
+/* ===============================
+   PRODUCT PAGE – RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+  .product-group h3 {
+    font-size: 1.6rem;
+  }
+
+  .flip-front h4 {
+    font-size: 1.15rem;
+  }
+
+  .flip-back p {
+    font-size: 0.9rem;
+  }
+}
+/* ===============================
+   TEAM PAGE – VISUAL ENHANCEMENT
+   =============================== */
+
+.team-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-subtitle {
+  opacity: 0.8;
+  max-width: 720px;
+  margin: 0.8rem auto 0;
+}
+
+/* Glow divider */
+.team-glow-divider {
+  width: 120px;
+  height: 3px;
+  margin: 2rem auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 140, 0, 0.9),
+    transparent
+  );
+  box-shadow:
+    0 0 14px rgba(255, 140, 0, 0.6),
+    0 0 34px rgba(255, 120, 0, 0.35);
+  border-radius: 999px;
+}
+
+/* Intro text */
+.team-intro {
+  max-width: 900px;
+  margin: 0 auto 4.5rem;
+  text-align: center;
+}
+
+.team-intro p {
+  margin-bottom: 1.6rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* Detail section */
+.team-details {
+  max-width: 1100px;
+  margin: 5rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+}
+
+.team-detail-block {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.team-detail-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 140, 0, 0.9),
+    transparent
+  );
+  box-shadow: 0 0 14px rgba(255, 140, 0, 0.6);
+  border-radius: 999px;
+}
+
+.team-detail-block h3 {
+  margin-bottom: 0.8rem;
+}
+
+.team-detail-block p {
+  line-height: 1.7;
+  opacity: 0.85;
+}
+/* ===============================
+   TEAM PROFILE PAGE – FINAL STYLE
+   =============================== */
+
+.profile-page {
+  padding: 6rem 8%;
+  color: white;
+}
+
+/* HERO */
+.profile-hero {
+  display: flex;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 4.5rem;
+}
+
+.profile-photo {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow:
+    0 0 22px rgba(255, 140, 0, 0.35),
+    0 0 55px rgba(255, 120, 0, 0.25);
+}
+
+.profile-intro h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+}
+
+.profile-intro h2 {
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+
+.profile-intro p {
+  max-width: 640px;
+  line-height: 1.75;
+  opacity: 0.9;
+}
+
+/* CONTENT SECTIONS */
+.profile-section {
+  max-width: 900px;
+  margin-bottom: 4rem;
+}
+
+.profile-section h3 {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Amber divider */
+.profile-section h3::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 0.6rem;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 0, 0.9),
+    transparent
+  );
+  box-shadow: 0 0 14px rgba(255, 140, 0, 0.7);
+  border-radius: 999px;
+}
+
+.profile-section p {
+  line-height: 1.8;
+  opacity: 0.88;
+  margin-bottom: 1.2rem;
+}
+
+/* ===============================
+   LINKS – REMOVE BLUE / UNDERLINE
+   =============================== */
+
+.profile-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.profile-links li {
+  margin: 0;
+}
+
+/* Pill-style links */
+.profile-links a {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 140, 0, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+/* Hover glow */
+.profile-links a:hover {
+  background: rgba(255, 140, 0, 0.9);
+  color: black !important;
+  box-shadow:
+    0 0 18px rgba(255, 140, 0, 0.6),
+    0 0 40px rgba(255, 120, 0, 0.4);
+}
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 768px) {
+  .profile-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 260px;
+  }
+}
