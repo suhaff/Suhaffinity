@@ -1,12 +1,11 @@
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 
-export default function ContactForm() {
+const ContactForm = () => {
   const formRef = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("SEND BUTTON CLICKED");
 
     emailjs
       .sendForm(
@@ -20,8 +19,8 @@ export default function ContactForm() {
         formRef.current.reset();
       })
       .catch((error) => {
-        console.error("EMAIL ERROR:", error);
-        alert("Failed to send message. Check console.");
+        console.error("EmailJS error:", error);
+        alert("Failed to send message.");
       });
   };
 
@@ -33,19 +32,24 @@ export default function ContactForm() {
         placeholder="Your name"
         required
       />
+
       <input
         type="email"
         name="email"
         placeholder="Your email"
         required
       />
+
       <textarea
         name="message"
         placeholder="Your message"
-        rows="3"
+        rows="4"
         required
       />
+
       <button type="submit">Send Message</button>
     </form>
   );
-}
+};
+
+export default ContactForm;
