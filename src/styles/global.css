@@ -1,3 +1,186 @@
+/* ===============================
+   RESPONSIVE OPTIMIZATION ONLY
+   (NO EXISTING STYLES MODIFIED)
+   =============================== */
+
+/* ---------- TABLETS (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 6%;
+  }
+
+  .hero-left h1 {
+    font-size: 3rem;
+  }
+
+  .hero-left p {
+    margin: 1rem auto 0;
+  }
+
+  .hero-right {
+    height: 420px;
+    min-height: 420px;
+    margin-top: 3rem;
+  }
+
+  .team-cards {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .profile-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 260px;
+  }
+
+  .mv-flip-card {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+
+/* ---------- PHONES (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+  /* Global spacing */
+  section,
+  .hero,
+  .company-details,
+  .mission-vision,
+  .services-section,
+  .product-section,
+  .about-page,
+  .profile-page,
+  .buzz-page {
+    padding: 4rem 6%;
+  }
+
+  /* HERO */
+  .hero-left h1 {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+
+  .hero-left button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-right {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  /* COMPANY / SERVICES / PRODUCTS */
+  .slab-grid,
+  .services-grid,
+  .product-grid,
+  .principles-grid,
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TEAM */
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card-3d {
+    width: 240px;
+    height: 340px;
+  }
+
+  /* PROFILE */
+  .profile-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .profile-intro h2 {
+    font-size: 1.1rem;
+  }
+
+  /* ABOUT */
+  .about-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  /* FLIP CARDS */
+  .flip-inner {
+    height: 200px;
+  }
+
+  .mv-front h3 {
+    font-size: 1.4rem;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    gap: 2rem;
+  }
+
+  .footer-form button {
+    width: 100%;
+  }
+}
+
+
+/* ---------- SMALL PHONES (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+  /* Typography */
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Hero button */
+  .hero-left button {
+    width: 100%;
+  }
+
+  /* Cards */
+  .mv-flip-card,
+  .team-card-3d {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Images */
+  .profile-photo {
+    width: 180px;
+    height: 240px;
+  }
+
+  /* Forms */
+  .custom-form button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
 /* ---------- RESET ---------- */
 * {
   margin: 0;
@@ -867,4 +1050,161 @@ footer {
 .footer-form {
   position: relative;
   z-index: 10;
+}
+/* ===============================
+   NAVBAR – MOBILE MENU
+   =============================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Desktop links */
+.navbar-links {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger (hidden by default) */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-hamburger span {
+  width: 26px;
+  height: 2px;
+  background: white;
+}
+
+/* Mobile slide menu */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0b1020, #05080f);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 200;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+/* Close button */
+.mobile-nav-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ===============================
+   MOBILE BREAKPOINT
+   =============================== */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+}
+/* ===============================
+   NAVBAR HOVER INTERACTIONS
+   =============================== */
+
+/* Desktop navbar links */
+.navbar-links a {
+  position: relative;
+  transition: 
+    transform 0.25s ease,
+    text-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Hover effect */
+.navbar-links a:hover {
+  transform: scale(1.08);
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.6),
+    0 0 14px rgba(120, 180, 255, 0.35);
+}
+/* ===============================
+   HERO "LEARN MORE" CTA
+   =============================== */
+
+.hero-left button {
+  border-radius: 999px; /* oval / pill shape */
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover interaction */
+.hero-left button:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.08);
+  box-shadow:
+    0 8px 22px rgba(255, 255, 255, 0.25),
+    0 0 18px rgba(255, 255, 255, 0.35);
+}
+/* ===============================
+   MISSION & VISION – GLOW HOVER
+   =============================== */
+
+.mv-card {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Hover glow (black hole orange) */
+.mv-card:hover {
+  box-shadow:
+    0 0 18px rgba(255, 140, 0, 0.25),
+    0 0 42px rgba(255, 120, 0, 0.18),
+    inset 0 0 20px rgba(255, 120, 0, 0.08);
 }

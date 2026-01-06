@@ -1,50 +1,56 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav style={styles.nav}>
-      {/* Logo → Home */}
-      <Link to="/" style={styles.logoLink}>
-        <h2 style={styles.logo}>Suhaffinity</h2>
-      </Link>
+    <>
+      <nav className="navbar">
+        {/* Logo */}
+        <Link to="/" className="navbar-logo">
+          Suhaffinity
+        </Link>
 
-      <div style={styles.links}>
-        <Link to="/" style={styles.link}>Home</Link>
-        <Link to="/about" style={styles.link}>About</Link>
-        <Link to="/services" style={styles.link}>Services</Link>
-        <Link to="/product" style={styles.link}>Product</Link>
-        <Link to="/team" style={styles.link}>Team</Link>
-      </div>
-    </nav>
+        {/* Desktop Links */}
+        <div className="navbar-links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/product">Product</Link>
+          <Link to="/team">Team</Link>
+        </div>
+
+        {/* Hamburger (Top Right) */}
+        <button
+          className="navbar-hamburger"
+          onClick={() => setOpen(true)}
+          aria-label="Open menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </nav>
+
+      {/* Mobile Slide Menu */}
+      <aside className={`mobile-nav ${open ? "open" : ""}`}>
+        <button
+          className="mobile-nav-close"
+          onClick={() => setOpen(false)}
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+
+        <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+        <Link to="/services" onClick={() => setOpen(false)}>Services</Link>
+        <Link to="/product" onClick={() => setOpen(false)}>Product</Link>
+        <Link to="/team" onClick={() => setOpen(false)}>Team</Link>
+      </aside>
+    </>
   );
-};
-
-const styles = {
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "20px 60px",
-    background: "#111",
-    color: "#fff",
-  },
-  logo: {
-    margin: 0,
-    cursor: "pointer",
-  },
-  logoLink: {
-    textDecoration: "none",
-    color: "inherit",
-  },
-  links: {
-    display: "flex",
-    gap: "20px",
-  },
-  link: {
-    color: "#fff",
-    textDecoration: "none",
-    fontSize: "16px",
-  },
 };
 
 export default Navbar;
