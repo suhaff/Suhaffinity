@@ -2835,3 +2835,120 @@ img {
   font-weight: 600;
   cursor: pointer;
 }
+.service-modal-title {
+  margin-bottom: 28px; /* space from title to inputs */
+}
+
+.service-modal-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs */
+.service-modal input {
+  background: rgba(20, 24, 33, 0.9);
+  border: 1px solid rgba(255, 170, 0, 0.6);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+/* FORCE autofill to respect dark theme */
+.service-modal input:-webkit-autofill,
+.service-modal input:-webkit-autofill:hover,
+.service-modal input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(20, 24, 33, 0.95) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Actions row */
+.service-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26px;
+}
+
+/* Back button */
+.modal-back {
+  background: none;
+  border: none;
+  color: #ffae00;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Submit */
+.modal-submit {
+  background: #ff9800;
+  border: none;
+  color: #000;
+  padding: 12px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: radial-gradient(circle at top, #0b1220, #05070d);
+  padding: 2.5rem;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.amber-glow {
+  box-shadow: 0 0 40px rgba(255, 153, 0, 0.35);
+}
+
+.modal-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  background: #0e1625;
+  border: 1px solid rgba(255, 153, 0, 0.5);
+  color: white;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: #ff9b00;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background: #ff9b00;
+  color: black;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}

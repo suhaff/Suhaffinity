@@ -8,6 +8,10 @@ export default function Services() {
   const [interestModal, setInterestModal] = useState(false);
   const [customModal, setCustomModal] = useState(false);
 
+  // ✅ Custom Demand shared state
+  const [customDescription, setCustomDescription] = useState("");
+  const [customBudget, setCustomBudget] = useState("");
+
   return (
     <>
       <section className="services-section">
@@ -62,8 +66,8 @@ export default function Services() {
               price: "$400 – $2,000",
               service: "UI / UX Design",
               desc:
-                "Elegant, user-focused designs that enhance usability, engagement, and brand identity.",
-              list: [
+                "Elegant, user-focused designs that enhance usability, engagement,and brand identity.",
+                list: [
                 "Wireframes & prototypes",
                 "Design systems",
                 "Accessibility focused",
@@ -101,7 +105,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Custom Demand (UNCHANGED UI) */}
+        {/* ✅ Custom Demand (UI unchanged) */}
         <div className="custom-demand">
           <h3>Custom Demand</h3>
           <p>
@@ -115,10 +119,16 @@ export default function Services() {
           >
             <textarea
               placeholder="Describe your project requirements..."
+              value={customDescription}
+              onChange={(e) => setCustomDescription(e.target.value)}
               required
             />
 
-            <select required>
+            <select
+              value={customBudget}
+              onChange={(e) => setCustomBudget(e.target.value)}
+              required
+            >
               <option value="">Expected budget range</option>
               <option>$500 – $1,000</option>
               <option>$1,000 – $3,000</option>
@@ -148,6 +158,8 @@ export default function Services() {
       <CustomDemandModal
         open={customModal}
         onClose={() => setCustomModal(false)}
+        description={customDescription}
+        budget={customBudget}
       />
     </>
   );
