@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ServiceRequestModal from "../components/ServiceRequestModal";
 import InterestModal from "../components/InterestModal";
 import CustomDemandModal from "../components/CustomDemandModal";
@@ -8,7 +9,7 @@ export default function Services() {
   const [interestModal, setInterestModal] = useState(false);
   const [customModal, setCustomModal] = useState(false);
 
-  // ✅ Custom Demand shared state
+  // Custom Demand shared state
   const [customDescription, setCustomDescription] = useState("");
   const [customBudget, setCustomBudget] = useState("");
 
@@ -87,12 +88,10 @@ export default function Services() {
               <span className="price">Starting from {item.price}</span>
 
               <div className="service-actions">
-                <button
-                  className="btn-primary"
-                  onClick={() => setInterestModal(true)}
-                >
-                  View Past Products →
-                </button>
+                <Link to="/product" className="btn-primary">
+                View Past Products →
+                </Link>
+
 
                 <button
                   className="btn-secondary"
