@@ -26,7 +26,7 @@ export default function About() {
           Founded through collaboration, long nights, and shared ambition,
           Suhaffinity emerged from a desire to build software that lasts.
           The company was shaped by engineers who value discipline, clarity,
-          and long-term thinking over short-lived trends.
+          and long-term thinking over short-lived trends. 
         </p>
 
         <p>
@@ -37,8 +37,8 @@ export default function About() {
         </p>
 
         <p>
-          At Suhaffinity, software is treated as a living system —
-          something to be nurtured, refined, and respected.
+          At Suhaffinity, software is treated as a living system,
+          something to be nurtured, refined, respected, and evolved.
         </p>
       </div>
 

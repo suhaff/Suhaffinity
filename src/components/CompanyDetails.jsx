@@ -4,8 +4,7 @@ export default function CompanyDetails() {
       <h2>Who We Are</h2>
 
       <p className="company-intro">
-        Suhaffinity is a software-focused technology company built on the belief
-        that great systems are not merely created — they are cultivated over time.
+        Suhaffinity is a software-focused technology company built to you to infinity and beyond.
       </p>
 
       <div className="principles-grid">
@@ -18,7 +17,8 @@ export default function CompanyDetails() {
             <div className="flip-card-back">
               <p>
                 We prioritize clean architecture, maintainability, and performance.
-                Every solution is designed with long-term stability and growth at its core.
+                Every solution is designed with long-term stability and growth at its core. 
+                Our goal is to take the training wheels off your technology and let it soar.
               </p>
             </div>
           </div>
@@ -33,7 +33,8 @@ export default function CompanyDetails() {
             <div className="flip-card-back">
               <p>
                 From modern web platforms to intelligent systems, we explore new
-                technologies responsibly — always in service of real, measurable value.
+                technologies responsibly, always in service of real, measurable value.
+                We don't just build your software, we help you envision what it can become.
               </p>
             </div>
           </div>
@@ -48,7 +49,8 @@ export default function CompanyDetails() {
             <div className="flip-card-back">
               <p>
                 Trust is earned through consistency, transparency, and dependable delivery.
-                We focus on doing things right — not merely doing them fast.
+                We focus on doing things right, not merely doing them fast.
+                Your vision is our mission, and we are committed to seeing it through.
               </p>
             </div>
           </div>
@@ -63,7 +65,8 @@ export default function CompanyDetails() {
             <div className="flip-card-back">
               <p>
                 Our solutions are built to adapt, scale, and evolve as technology
-                and business needs change — engineered for what comes next.
+                and business needs change. Our solutions are not just for today, but for the challenges and opportunities of tomorrow.
+                Our softwares don't change, they adapt.
               </p>
             </div>
           </div>

@@ -10,11 +10,10 @@ export default function Hero() {
         </h1>
 
         <p>
-          At Suhaffinity, we engineer software with a long horizon in mind —
-          systems designed to scale, evolve, and endure.
+          At Suhaffinity, we engineer software with a long horizon in mind. The only limit is your imagination. We can create whatever you desire for your business. 
           <br /><br />
-          From first principles to future possibilities, we build with intent,
-          precision, and curiosity — shaping technology that lasts beyond trends.
+          We will be with you every step of the way, from concept to deployment and beyond. We will ensure your software is scalable, secure, and future-proof. We will take your business to infinity and beyond.
+          Our solutions are like Icarus, they take for the skies, but they never fall.
         </p>
 
         <button

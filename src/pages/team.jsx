@@ -13,7 +13,7 @@ export default function Team() {
         <h1>Meet the Team</h1>
         <p className="team-subtitle">
           A small, focused team driven by engineering discipline,
-          curiosity, and long-term thinking.
+          curiosity, and long-term thinking and a burning passion to build.
         </p>
 
         <div className="team-glow-divider" />
