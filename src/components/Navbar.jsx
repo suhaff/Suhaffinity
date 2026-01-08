@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo/suhaffinity-logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -7,12 +8,17 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        {/* Logo */}
-        <Link to="/" className="navbar-logo">
-          Suhaffinity
+        {/* BRAND */}
+        <Link to="/" className="navbar-brand">
+          <img
+            src={logo}
+            alt="Suhaffinity logo"
+            className="navbar-logo-img"
+          />
+          <span className="navbar-logo-text">Suhaffinity</span>
         </Link>
 
-        {/* Desktop Links */}
+        {/* DESKTOP LINKS */}
         <div className="navbar-links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
@@ -21,7 +27,7 @@ const Navbar = () => {
           <Link to="/team">Team</Link>
         </div>
 
-        {/* Hamburger (Top Right) */}
+        {/* HAMBURGER */}
         <button
           className="navbar-hamburger"
           onClick={() => setOpen(true)}
@@ -33,7 +39,7 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile Slide Menu */}
+      {/* MOBILE MENU */}
       <aside className={`mobile-nav ${open ? "open" : ""}`}>
         <button
           className="mobile-nav-close"

@@ -2032,3 +2032,51 @@ a:active {
   position: relative;
   z-index: 1;
 }
+/* NAVBAR BRAND */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.navbar-logo-img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.navbar-logo-text {
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+.navbar {
+  height: 72px;           /* keeps navbar stable */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  width: 40px;   /* was ~28px */
+  height: 40px;
+  display: block;
+}
+.navbar-logo-img {
+  width: 100px;
+  height: auto;
+  position: relative;
+  top: 0;                 /* adjust if needed */
+  pointer-events: none;  /* optional */
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar-logo-img {
+  top: 2px;
+}
+.navbar-logo-img {
+  filter: drop-shadow(0 0 8px rgba(255, 200, 120, 0.25));
+}
