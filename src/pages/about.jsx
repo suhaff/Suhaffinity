@@ -41,6 +41,35 @@ export default function About() {
           something to be nurtured, refined, respected, and evolved.
         </p>
       </div>
+      {/* ABOUT VIDEO */}
+      <section className="about-video">
+        <div className="about-video-inner">
+          <h2>Who We Are</h2>
+          <p className="about-video-subtitle">
+            A short look into our philosophy, our process, and why we build software differently.
+          </p>
+
+          <div className="video-wrapper">
+            {/* OPTION A: Local video */}
+            <video
+              src="/videos/about-suhaffinity.mp4"
+              controls
+              playsInline
+              preload="metadata"
+            />
+
+            {/* OPTION B: YouTube / Vimeo (use instead of video tag)
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="About Suhaffinity"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+            */}
+          </div>
+        </div>
+      </section>
 
       {/* MISSION & VISION PANELS */}
       <section className="mission-vision-section">

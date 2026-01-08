@@ -2682,3 +2682,156 @@ img {
   font-size: 1.05rem;
   line-height: 1.6;
 }
+/* ===============================
+   ABOUT VIDEO SECTION
+   =============================== */
+
+.about-video {
+  padding: 5rem 8%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-video-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-video h2 {
+  font-size: 2.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-video-subtitle {
+  opacity: 0.75;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+/* Video container */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 18px rgba(255, 140, 0, 0.15),
+    inset 0 0 18px rgba(255, 120, 0, 0.06);
+}
+
+/* Video / iframe */
+.video-wrapper video,
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .about-video {
+    padding: 4rem 6%;
+  }
+
+  .about-video h2 {
+    font-size: 2.2rem;
+  }
+}
+/* ===============================
+   SERVICE REQUEST MODAL SPACING
+   =============================== */
+
+.modal-title {
+  margin-bottom: 1.6rem; /* creates space below title */
+}
+
+.service-modal input:first-of-type {
+  margin-top: 0.4rem; /* extra safety spacing */
+}
+.service-modal h2 {
+  margin-bottom: 1.6rem;
+}
+/* ===============================
+   SERVICE REQUEST MODAL – FIXED
+   =============================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.service-modal {
+  background: radial-gradient(circle at top, #0b1020, #05080f);
+  padding: 2.4rem;
+  width: 420px;
+  max-width: 90%;
+  border-radius: 18px;
+  box-shadow:
+    0 0 40px rgba(255, 140, 0, 0.35);
+}
+
+/* ✅ TITLE SPACING FIX */
+.service-modal-title {
+  margin-bottom: 1.8rem; /* THIS is the missing spacing */
+}
+
+/* Input spacing */
+.service-modal-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Inputs */
+.service-modal input {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 140, 0, 0.6);
+  color: white;
+}
+
+/* Buttons row */
+.service-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Back button */
+.modal-back {
+  background: none;
+  border: none;
+  color: rgba(255, 180, 100, 0.85);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.modal-back:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.modal-submit {
+  background: #ff9800;
+  color: black;
+  border: none;
+  padding: 0.7rem 2.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
