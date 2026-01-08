@@ -14,6 +14,8 @@ export default function Team() {
         <p className="team-subtitle">
           A small, focused team driven by engineering discipline,
           curiosity, and long-term thinking and a burning passion to build.
+          <br></br>
+          We have Numaan - the Builder, Luqmaan - the Banker and Raza - the Balancer.
         </p>
 
         <div className="team-glow-divider" />
