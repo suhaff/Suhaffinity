@@ -2080,3 +2080,387 @@ a:active {
 .navbar-logo-img {
   filter: drop-shadow(0 0 8px rgba(255, 200, 120, 0.25));
 }
+/* ==========================================================
+   UNIVERSAL MOBILE NORMALIZATION
+   ========================================================== */
+
+/* -------- Viewport consistency (iOS Safari fix) -------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Prevent random zooming on inputs (iOS) */
+input,
+textarea,
+select,
+button {
+  font-size: 16px;
+}
+
+/* -------- Safe-area support (iPhone notch) -------- */
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* -------- Correct vh on mobile browsers -------- */
+:root {
+  --vh: 1vh;
+}
+
+@supports (height: 100dvh) {
+  .hero,
+  .team-hero,
+  .buzz-page {
+    min-height: 100dvh;
+  }
+}
+
+/* -------- Touch consistency -------- */
+* {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* -------- Flexbox rounding fix (Samsung / Vivo) -------- */
+.hero,
+.profile-hero,
+.member-hero {
+  min-height: auto;
+}
+
+/* -------- Prevent overflow bugs -------- */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- Universal padding clamp -------- */
+section,
+.hero,
+.company-details,
+.mission-vision,
+.services-section,
+.product-section,
+.about-page,
+.profile-page,
+.buzz-page {
+  padding-left: clamp(1.2rem, 6vw, 8%);
+  padding-right: clamp(1.2rem, 6vw, 8%);
+}
+
+/* -------- Typography consistency -------- */
+h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3.8vw, 1.6rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 2.8vw, 1rem);
+}
+
+/* -------- Navbar stability -------- */
+.navbar {
+  padding-left: clamp(1.2rem, 6vw, 60px);
+  padding-right: clamp(1.2rem, 6vw, 60px);
+}
+
+/* -------- Prevent mobile menu cut-off -------- */
+.mobile-nav {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* -------- Button tap safety -------- */
+button,
+a {
+  min-height: 44px;
+}
+
+/* -------- Prevent iOS shadow clipping -------- */
+.hero-right,
+.team-card-3d,
+.flip-card,
+.mv-card {
+  transform: translateZ(0);
+}
+
+/* -------- Reduce motion if user requests -------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* ===============================
+   UNIVERSAL MOBILE NORMALIZATION
+   =============================== */
+
+/* Prevent iOS text autoscaling weirdness */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Fix iOS viewport height issues */
+body {
+  min-height: 100dvh;
+}
+
+/* Prevent image overflow on all devices */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* ===============================
+   UNIVERSAL MOBILE NORMALIZATION
+   =============================== */
+
+/* Prevent iOS text autoscaling weirdness */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Fix iOS viewport height issues */
+body {
+  min-height: 100dvh;
+}
+
+/* Prevent image overflow on all devices */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* ===============================
+   ABOUT PAGE – MOBILE FIX
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .about-page {
+    padding: 4rem 6%;
+  }
+
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-tagline {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  .about-content {
+    margin-bottom: 3.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+}
+/* ===============================
+   ABOUT PAGE – MOBILE FIX
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .about-page {
+    padding: 4rem 6%;
+  }
+
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-tagline {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  .about-content {
+    margin-bottom: 3.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+}
+/* ===============================
+   PROFILE PAGE – HARD MOBILE FIX
+   =============================== */
+
+@media (max-width: 768px) {
+
+  /* Kill grid entirely */
+  .profile-hero,
+  .member-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+
+  /* Neutralize grid columns */
+  .profile-page .profile-hero,
+  .member-page .member-hero {
+    grid-template-columns: unset !important;
+  }
+
+  /* Image wrapper */
+  .profile-photo,
+  .member-photo {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4;
+    margin: 0 auto !important;
+  }
+
+  /* Text */
+  .profile-intro,
+  .member-intro {
+    padding-top: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .profile-intro h1,
+  .member-intro h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .profile-intro p,
+  .member-intro p {
+    font-size: 0.95rem !important;
+    line-height: 1.75 !important;
+  }
+}
+/* ===============================
+   ABOUT PAGE – HARD MOBILE FIX
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .about-page {
+    padding: 4rem 6% !important;
+  }
+
+  .about-hero {
+    text-align: center !important;
+  }
+
+  .about-hero h1 {
+    font-size: 2.4rem !important;
+  }
+
+  .about-content {
+    max-width: 100% !important;
+  }
+
+  .about-content p {
+    font-size: 0.95rem !important;
+    line-height: 1.75 !important;
+  }
+}
+/* ===============================
+   ABOUT PAGE – MISSION & VISION
+   HARD MOBILE FIX (FINAL)
+   =============================== */
+
+@media (max-width: 768px) {
+
+  /* Section spacing */
+  .mission-vision,
+  .mission-vision-section {
+    padding: 3.5rem 6% !important;
+  }
+
+  /* Force single column always */
+  .mv-grid,
+  .mv-panels {
+    grid-template-columns: 1fr !important;
+    gap: 1.8rem !important;
+  }
+
+  /* Flip cards – FIXED */
+  .mv-flip-card {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: 220px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Inner card padding */
+  .mv-front,
+  .mv-back {
+    padding: 1.6rem !important;
+  }
+
+  /* Titles */
+  .mv-front h3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Text */
+  .mv-front p,
+  .mv-back p {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+  }
+}
+@media (max-width: 480px) {
+
+  .mv-flip-card {
+    height: 200px !important;
+  }
+
+  .mv-front h3 {
+    font-size: 1.15rem !important;
+  }
+
+  .mv-front p,
+  .mv-back p {
+    font-size: 0.85rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 3.5rem; /* space below navbar */
+    min-height: calc(100svh - 72px);
+  }
+}
+@media (max-width: 768px) {
+  .hero-right {
+    height: 300px;
+    min-height: 300px;
+    max-height: 320px;
+    margin-top: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-right canvas,
+  .hero-right svg,
+  .hero-right img {
+    max-width: 260px;
+    max-height: 260px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    min-height: calc(100svh - 72px);
+  }
+}
